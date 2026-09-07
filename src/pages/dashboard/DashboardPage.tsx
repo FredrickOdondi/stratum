@@ -87,7 +87,7 @@ export function DashboardPage() {
     delivered: engagements.filter(e => e.stage === 'delivered').length,
   };
 
-  const handle = user?.email?.split('@')[0] ?? 'there';
+  const handle = user?.user_metadata?.full_name ?? user?.email?.split('@')[0] ?? 'there';
   const hour = new Date().getHours();
   let greeting = 'Good evening';
   if (hour >= 5 && hour < 12) greeting = 'Good morning';
