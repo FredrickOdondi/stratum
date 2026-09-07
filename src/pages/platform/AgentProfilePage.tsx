@@ -33,12 +33,12 @@ export function AgentProfilePage() {
         </button>
 
         {/* Profile Header */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 32, marginBottom: 48 }}>
+        <div className="agent-profile-header">
           <div style={{ width: 140, height: 140, borderRadius: '24px', overflow: 'hidden', border: '2px solid var(--b1)', flexShrink: 0, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
             <img src={agent.avatar} alt={agent.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ flex: 1 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+            <div className="agent-profile-title">
               <h1 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--t1)', margin: 0, letterSpacing: '-0.03em' }}>{agent.name}</h1>
               <div style={{ padding: '4px 12px', background: 'var(--green-dim)', color: 'var(--green)', borderRadius: '100px', fontSize: '0.75rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
                 <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--green)' }} />
