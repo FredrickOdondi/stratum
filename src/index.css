@@ -1450,6 +1450,21 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
   padding-bottom: 48px;
 }
 
+.connectors-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.connectors-search {
+  position: relative;
+  width: 300px;
+  flex-shrink: 0;
+}
+
 @media (max-width: 1200px) {
   .connectors-grid {
     column-count: 2;
@@ -1459,6 +1474,17 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
 @media (max-width: 768px) {
   .connectors-grid {
     column-count: 1;
+  }
+  .connectors-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .connectors-search {
+    width: 100%;
+  }
+  .connectors-search input {
+    font-size: 16px !important; /* Prevents iOS auto-zoom */
   }
 }
 

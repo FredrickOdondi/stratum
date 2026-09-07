@@ -487,7 +487,7 @@ export function ConnectorsPage() {
       <div className="page" style={{ maxWidth: 1400, height: '100%', display: 'flex', flexDirection: 'column' }}>
 
         {/* Header */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 32 }}>
+        <div className="connectors-header">
           <div style={{ flex: '1 1 300px' }}>
             <h1 style={{ fontFamily: 'var(--font-sans)', fontSize: '2.5rem', color: 'var(--text-primary)', margin: '0 0 8px 0' }}>Connectors</h1>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginBottom: 12, lineHeight: 1.5 }}>
@@ -502,7 +502,7 @@ export function ConnectorsPage() {
               </div>
             )}
           </div>
-          <div style={{ position: 'relative', width: 300, flexShrink: 0 }}>
+          <div className="connectors-search">
             <Search size={16} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-tertiary)', pointerEvents: 'none' }} />
             <input
               type="text" placeholder="Search integrations..."
