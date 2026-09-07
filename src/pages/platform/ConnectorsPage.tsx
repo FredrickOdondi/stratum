@@ -571,7 +571,7 @@ export function ConnectorsPage() {
                                 {isDisconnecting ? <Loader2 size={13} style={{ animation: 'spin 1s linear infinite' }} /> : <Unplug size={13} />}
                               </button>
                             </div>
-                          ) : tier === 'free' && connectedIds.size >= 1 ? (
+                          ) : tier === 'free' && connectedIds.size >= 5 ? (
                             <button
                               onClick={() => initializePayment({ onSuccess, onClose: () => {} })}
                               className="btn btn-outline btn-sm"
