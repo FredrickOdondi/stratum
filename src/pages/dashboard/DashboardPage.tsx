@@ -95,10 +95,10 @@ export function DashboardPage() {
 
   return (
     <AppShell>
-      <div style={{ padding: '48px', maxWidth: '1280px', margin: '0 auto' }}>
+      <div className="dashboard-container">
 
         {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '48px' }}>
+        <div className="dashboard-header">
           <div>
             <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '10px' }}>
               Stratum Advisory
@@ -117,13 +117,13 @@ export function DashboardPage() {
         </div>
 
         {/* Metrics Rail */}
-        <div style={{ display: 'flex', alignItems: 'stretch', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '28px 0', marginBottom: '48px' }}>
+        <div className="metrics-rail">
           {[
             { label: 'Total', value: stats.total, color: 'var(--text-primary)' },
             { label: 'In Progress', value: stats.active, color: 'var(--accent)' },
             { label: 'Delivered', value: stats.delivered, color: 'var(--success)' },
           ].map((m, i) => (
-            <div key={m.label} style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: i === 0 ? '0 32px 0 0' : i === 2 ? '0 0 0 32px' : '0 32px', borderLeft: i > 0 ? '1px solid var(--border)' : undefined }}>
+            <div key={m.label} className="metrics-item">
               <span style={{ fontSize: '2.75rem', fontWeight: 700, letterSpacing: '-0.04em', color: m.color, lineHeight: 1 }}>
                 {m.value}
               </span>

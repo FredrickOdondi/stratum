@@ -215,7 +215,7 @@ export function AppShell({
                 </button>
               </div>
             )}
-            <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{user?.user_metadata?.full_name || user?.email}</span>
+            <span className="topbar-user-name">{user?.user_metadata?.full_name || user?.email}</span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: '50%', background: 'var(--bg-3)', border: '1px solid var(--border)', fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '0.02em' }}>
               {initials}
             </div>
