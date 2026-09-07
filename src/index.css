@@ -599,9 +599,38 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
 .new-engagement-container {
   padding: 40px 48px;
 }
+
+.consolidated-data-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.consolidated-data-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .new-engagement-container {
     padding: 24px 16px;
+  }
+  .consolidated-data-container {
+    padding: 24px 16px;
+  }
+  .consolidated-data-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .consolidated-data-header button {
+    width: 100%;
+    justify-content: center;
   }
 }
 

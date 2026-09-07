@@ -207,9 +207,9 @@ export function ConsolidatedDataPage() {
 
   return (
     <AppShell>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px' }}>
+      <div className="consolidated-data-container">
         {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '48px' }}>
+        <div className="consolidated-data-header">
           <div>
             <div className="section-heading" style={{ marginBottom: '12px' }}>Platform Data</div>
             <h1 style={{ fontSize: '2.5rem', fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--t1)', lineHeight: 1.1, fontFamily: 'var(--font-sans)', margin: 0 }}>
