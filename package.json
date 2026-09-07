@@ -1,0 +1,50 @@
+{
+  "name": "seagreenadventuroussystemsanalysis",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^8.2.0",
+    "@supabase/auth-ui-react": "^0.4.7",
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/supabase-js": "^2.115.0",
+    "@tanstack/react-query": "^5.102.8",
+    "@tanstack/react-query-persist-client": "^5.102.8",
+    "@types/papaparse": "^5.5.2",
+    "date-fns": "^4.4.0",
+    "docx": "^9.7.1",
+    "fflate": "^0.8.3",
+    "html2pdf.js": "^0.14.0",
+    "idb-keyval": "^6.3.0",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.41.0",
+    "openai": "^7.10.0",
+    "papaparse": "^5.7.0",
+    "paystack": "^2.0.1",
+    "pdfjs-dist": "^6.3.289",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-is": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "react-paystack": "^6.0.0",
+    "react-router-dom": "^7.18.3",
+    "recharts": "^3.10.1",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "oxlint": "^1.79.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  }
+}
