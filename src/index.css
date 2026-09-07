@@ -1524,3 +1524,99 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
     display: none;
   }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   MOBILE HAMBURGER MENU & ASK AI RESPONSIVENESS
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ask-ai-header {
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ask-ai-chat-area {
+  padding: 32px;
+}
+.ask-ai-input-area {
+  padding: 24px 32px;
+}
+.hamburger-btn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .app-sidebar.mobile-open {
+    display: flex !important;
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    z-index: 400;
+    border-right: 1px solid var(--b1);
+    box-shadow: var(--sh3);
+    background: var(--bg-2);
+  }
+  .mobile-overlay {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 399;
+  }
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--t1);
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ask-ai-header {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .ask-ai-chat-area {
+    padding: 16px;
+  }
+  .ask-ai-input-area {
+    padding: 12px 16px;
+  }
+  .ask-ai-header .connectors-list {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .ask-ai-input-wrapper input {
+    font-size: 16px !important; /* Prevent iOS zoom */
+  }
+}
+
+/* Fix for topbar hamburger dropdown */
+@media (max-width: 768px) {
+  .topbar-actions {
+    display: none !important;
+    position: absolute;
+    top: var(--topbar-h);
+    right: 0;
+    left: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--b1);
+    flex-direction: column;
+    padding: 16px 20px;
+    align-items: flex-start;
+    box-shadow: var(--sh3);
+  }
+  .topbar-actions.mobile-open {
+    display: flex !important;
+  }
+}

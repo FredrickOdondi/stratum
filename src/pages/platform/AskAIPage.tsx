@@ -110,7 +110,7 @@ export function AskAIPage() {
     <AppShell>
       <div className="page" style={{ height: 'calc(100vh - var(--topbar-h))', display: 'flex', flexDirection: 'column', gap: 0, padding: 0 }}>
         {/* Compact Header Area */}
-        <div style={{ padding: '12px 32px', borderBottom: '1px solid var(--b1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--bg)', flexShrink: 0 }}>
+        <div className="ask-ai-header" style={{ borderBottom: '1px solid var(--b1)', background: 'var(--bg)', flexShrink: 0 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 32, height: 32, borderRadius: '8px', background: 'var(--gold-lo)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)', overflow: 'hidden' }}>
               <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Data Agent" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
@@ -122,7 +122,7 @@ export function AskAIPage() {
           </div>
 
           {(connectors.length > 0 || true) && (
-            <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 2 }}>
+            <div className="connectors-list" style={{ display: 'flex', gap: 8, paddingBottom: 2 }}>
               <button
                 onClick={() => setActiveConnectorId('global_knowledge')}
                 style={{
@@ -175,7 +175,7 @@ export function AskAIPage() {
         ) : (
           <>
             {/* Messages */}
-            <div style={{ flex: 1, overflowY: 'auto', padding: '32px' }}>
+            <div className="ask-ai-chat-area" style={{ flex: 1, overflowY: 'auto' }}>
               {messages.length === 0 ? (
                 <div style={{ textAlign: 'center', color: 'var(--t3)', marginTop: '10vh' }}>
                   <Bot size={48} style={{ opacity: 0.2, margin: '0 auto 16px' }} />
@@ -242,8 +242,8 @@ export function AskAIPage() {
             </div>
 
             {/* Input Box */}
-            <div style={{ padding: '24px 32px', borderTop: '1px solid var(--b1)', background: 'var(--bg)' }}>
-              <div style={{ maxWidth: 800, margin: '0 auto', position: 'relative' }}>
+            <div className="ask-ai-input-area" style={{ borderTop: '1px solid var(--b1)', background: 'var(--bg)' }}>
+              <div className="ask-ai-input-wrapper" style={{ maxWidth: 800, margin: '0 auto', position: 'relative' }}>
                 <input 
                   type="text" 
                   value={input}

@@ -16,7 +16,9 @@ import {
   Link2,
   Database,
   MessageSquare,
-  Home
+  Home,
+  Menu,
+  X
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import { useTheme } from '../../hooks/useTheme';
@@ -49,6 +51,7 @@ export function AppShell({
   const [engagementName, setEngagementName] = useState<string | null>(null);
   const [tier, setTier] = useState<'free' | 'pro'>('free');
   const { theme, toggleTheme } = useTheme();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [isCollapsed, setIsCollapsed] = useState<boolean>(() => {
     const stored = localStorage.getItem('stratum_sidebar_collapsed');
@@ -183,7 +186,12 @@ export function AppShell({
           )}
         </div>
 
-        <div className="topbar-actions">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <button className="hamburger-btn" style={{ margin: 0, padding: 6 }} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+          
+          <div className={`topbar-actions ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           {engagementId && (
             <button
               className="btn btn-ghost btn-sm"
@@ -240,6 +248,7 @@ export function AppShell({
           >
             <LogOut size={14} />
           </button>
+          </div>
         </div>
       </header>
 
