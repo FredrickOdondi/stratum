@@ -242,30 +242,47 @@ export function AskAIPage() {
             </div>
 
             {/* Input Box */}
-            <div className="ask-ai-input-area" style={{ borderTop: '1px solid var(--b1)', background: 'var(--bg)' }}>
-              <div className="ask-ai-input-wrapper" style={{ maxWidth: 800, margin: '0 auto', position: 'relative' }}>
-                <input 
-                  type="text" 
+            <div className="ask-ai-input-area" style={{ borderTop: '1px solid var(--b1)', background: 'var(--bg)', padding: '24px' }}>
+              <div 
+                style={{ 
+                  maxWidth: 800, margin: '0 auto', 
+                  display: 'flex', alignItems: 'flex-end', gap: '12px',
+                  background: 'var(--bg-2)', border: '1px solid var(--b2)',
+                  borderRadius: '24px', padding: '10px 12px 10px 24px',
+                  boxShadow: 'var(--sh2)', transition: 'border-color 0.2s ease'
+                }}
+              >
+                <textarea 
                   value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter') handleSend();
+                  onChange={e => {
+                    setInput(e.target.value);
+                    e.target.style.height = 'auto';
+                    e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
                   }}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault();
+                      handleSend();
+                      const target = e.target as HTMLTextAreaElement;
+                      setTimeout(() => { target.style.height = 'auto'; }, 0);
+                    }
+                  }}
+                  rows={1}
                   placeholder={loadingSchema ? "Loading database schema..." : "Ask a question about your data..."}
                   disabled={loadingSchema || isTyping}
                   style={{
-                    width: '100%', padding: '16px 20px', paddingRight: 64,
-                    background: 'var(--bg-2)', border: '1px solid var(--b2)',
-                    borderRadius: '100px', fontSize: '0.9375rem', color: 'var(--t1)',
-                    boxShadow: 'var(--sh2)', outline: 'none'
+                    flex: 1, padding: '4px 0', border: 'none', background: 'transparent',
+                    fontSize: '16px', color: 'var(--t1)', outline: 'none',
+                    resize: 'none', fontFamily: 'inherit', lineHeight: '1.5',
+                    minHeight: '24px', maxHeight: '200px', overflowY: 'auto',
+                    scrollbarWidth: 'none', display: 'block', alignSelf: 'center'
                   }}
                 />
                 <button
                   onClick={handleSend}
                   disabled={!input.trim() || loadingSchema || isTyping}
                   style={{
-                    position: 'absolute', right: 8, top: 8, bottom: 8,
-                    width: 36, borderRadius: '50%',
+                    width: 36, height: 36, borderRadius: '50%', flexShrink: 0,
                     background: input.trim() ? 'var(--gold)' : 'var(--bg-3)',
                     color: input.trim() ? 'var(--bg)' : 'var(--t3)',
                     border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center',
