@@ -172,3 +172,39 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .pricing-page {
+    padding: 80px 20px;
+  }
+  
+  .pricing-header {
+    margin-bottom: 40px;
+  }
+  
+  .pricing-title {
+    font-size: 2.25rem;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .pricing-card {
+    padding: 32px 24px;
+  }
+  
+  .pricing-price {
+    font-size: 2.5rem;
+  }
+  
+  .pricing-desc {
+    margin-bottom: 24px;
+  }
+  
+  .pricing-features {
+    margin-bottom: 32px;
+  }
+}
