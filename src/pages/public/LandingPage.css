@@ -32,6 +32,12 @@
   text-decoration: none;
 }
 
+.landing-nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 .landing-nav-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -270,4 +276,81 @@
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .landing-nav {
+    padding: 0 20px;
+  }
+  
+  .hero-section {
+    flex-direction: column;
+    padding: 120px 20px 60px;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+  }
+  
+  .bento-section {
+    padding: 20px 20px 80px;
+  }
+  
+  .landing-nav-links {
+    gap: 12px;
+  }
+  
+  .landing-nav-title {
+    display: none;
+  }
+  
+  .landing-nav-links .btn-hero-primary {
+    height: 36px !important;
+    padding: 0 16px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  .landing-nav-links a {
+    font-size: 0.875rem !important;
+  }
+  
+  .bento-card {
+    padding: 24px;
+  }
+  
+  .bento-title {
+    font-size: 1.25rem;
+  }
+  
+  .hero-image-wrapper {
+    width: 100%;
+    min-height: 240px;
+    height: 300px;
+  }
+  
+  .bento-half-split {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .bento-half-split > div:last-child {
+    min-height: 240px !important;
+  }
+  
+  .landing-footer {
+    padding: 24px 20px;
+  }
 }

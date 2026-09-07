@@ -34,7 +34,7 @@ export function LandingPage() {
           <AppLogo size={32} />
           <span className="landing-nav-title">Stratum</span>
         </Link>
-        <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+        <div className="landing-nav-links">
           <Link to="/pricing" style={{ color: 'var(--t2)', textDecoration: 'none', fontSize: '0.9375rem', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--t1)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--t2)'}>
             Pricing
           </Link>
@@ -141,7 +141,7 @@ export function LandingPage() {
           </div>
 
           {/* Presentation Generation (Half) */}
-          <div className="bento-card bento-half" style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+          <div className="bento-card bento-half bento-half-split" style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
             <div style={{ flex: 1 }}>
               <div className="bento-icon"><FileText size={24} /></div>
               <h3 className="bento-title">Pyramid Principle Synthesis</h3>
