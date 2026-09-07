@@ -449,6 +449,8 @@ export function ConnectorsPage() {
     email: user?.email || 'test@stratum.com',
     amount: 10 * 100,
     publicKey: 'pk_live_82a92343e08ef9d76f653ae86e0664d098685e20',
+    currency: 'KES',
+    channels: ['card', 'mobile_money'],
   };
 
   const initializePayment = usePaystackPayment(paystackConfig);
