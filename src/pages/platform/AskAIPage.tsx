@@ -117,7 +117,6 @@ export function AskAIPage() {
             </div>
             <div>
               <div style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--t1)', lineHeight: 1.2 }}>Elena Data</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--t3)' }}>Query your connected data</div>
             </div>
           </div>
 
