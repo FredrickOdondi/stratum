@@ -211,7 +211,7 @@ export function NewEngagementPage() {
 
   return (
     <AppShell>
-      <div style={{ maxWidth: 720, margin: '0 auto', padding: '40px 48px' }}>
+      <div className="new-engagement-container" style={{ maxWidth: 720, margin: '0 auto' }}>
 
         {/* Header */}
         <div style={{ marginBottom: 40 }}>
