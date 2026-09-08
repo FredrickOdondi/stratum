@@ -80,7 +80,7 @@ export function PrivacyPage() {
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--t1)', marginBottom: 16 }}>4. Contact Us</h2>
             <p style={{ marginBottom: 16 }}>
               If you have any questions about this privacy policy or our privacy practices, please contact us at: <br/>
-              <a href="mailto:hello@stratumsys.online" style={{ color: 'var(--gold)', textDecoration: 'none' }}>hello@stratumsys.online</a>
+              <a href="mailto:fredrickodondi95@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none' }}>fredrickodondi95@gmail.com</a>
             </p>
           </section>
         </div>

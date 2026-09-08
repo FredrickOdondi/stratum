@@ -52,7 +52,7 @@ export function ContactPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
               <div style={{ fontSize: '0.875rem', color: 'var(--t2)', marginBottom: '4px' }}>Email Support</div>
-              <a href="mailto:hello@stratumsys.online" style={{ color: 'var(--gold)', textDecoration: 'none', fontWeight: 500 }}>hello@stratumsys.online</a>
+              <a href="mailto:fredrickodondi95@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none', fontWeight: 500 }}>fredrickodondi95@gmail.com</a>
             </div>
             <div>
               <div style={{ fontSize: '0.875rem', color: 'var(--t2)', marginBottom: '4px' }}>Business Hours</div>
