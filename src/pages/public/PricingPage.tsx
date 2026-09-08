@@ -69,7 +69,7 @@ export function PricingPage() {
               </li>
               <li className="pricing-feature">
                 <CheckCircle2 size={18} className="pricing-feature-icon" />
-                <span className="pricing-feature-text">1 data connector maximum</span>
+                <span className="pricing-feature-text">5 data connectors maximum</span>
               </li>
               <li className="pricing-feature">
                 <CheckCircle2 size={18} className="pricing-feature-icon" />
