@@ -22,17 +22,31 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Stratum Advisory",
-        "url": "https://stratumsys.online",
-        "logo": "https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png",
-        "sameAs": [
-          "https://twitter.com/stratumadvisory",
-          "https://linkedin.com/company/stratumadvisory"
-        ]
-      }
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Stratum Advisory",
+          "url": "https://stratumsys.online",
+          "logo": "https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png",
+          "sameAs": [
+            "https://twitter.com/stratumadvisory",
+            "https://linkedin.com/company/stratumadvisory"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Stratum Advisory Platform",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "WebBrowser",
+          "offers": {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "KES"
+          }
+        }
+      ]
     </script>
 
     <title>Stratum Advisory — AI Consulting Platform</title>
@@ -59,8 +73,8 @@
         </nav>
       </header>
       <main>
-        <h1>AI-Native Strategy Consulting</h1>
-        <p>From intake to polished deliverable in hours. Stratum accelerates your workflow using specialized AI agents, ensuring every claim is backed by irrefutable evidence.</p>
+        <h1>The Premier AI Consulting Platform</h1>
+        <p>From intake to polished deliverable in hours. Stratum is the definitive AI strategy tool for consultants, accelerating your workflow using specialized AI agents, ensuring every claim is backed by irrefutable evidence.</p>
         
         <h2>Your Private AI Consulting Team</h2>
         <p>Stratum doesn't just use one model. It deploys an entire suite of specialized agents—from the Scoping Agent to the Red-Team QA Critic—who collaborate seamlessly to structure, analyze, and synthesize your engagement.</p>
@@ -80,6 +94,26 @@
         </nav>
         <p>&copy; 2026 Stratum Advisory. All rights reserved.</p>
       </footer>
+
+      <!-- STATIC FALLBACK CONTENT FOR SUBPAGES (For non-JS crawlers visiting sub-routes) -->
+      <div style="display: none;">
+        <article id="about-content">
+          <h1>About Stratum Advisory</h1>
+          <p>Stratum Advisory is built for modern strategy professionals. Our platform bridges the gap between raw data and polished insight using purpose-built AI agents. Our mission is to empower consultants, private equity firms, and corporate strategy teams with an "always-on" digital workforce.</p>
+        </article>
+        <article id="pricing-content">
+          <h1>Pricing Plans - Flexible AI Consulting Tool</h1>
+          <p>Simple, transparent pricing for Stratum Advisory. Get started for free with up to 5 data connectors, or upgrade to Pro for advanced features at 2000 KES per month.</p>
+        </article>
+        <article id="contact-content">
+          <h1>Contact Us</h1>
+          <p>Email Support: fredrickodondi95@gmail.com. Business Hours: Monday - Friday, 9am - 5pm EST.</p>
+        </article>
+        <article id="privacy-content">
+          <h1>Privacy Policy</h1>
+          <p>We may collect, use, store and transfer Identity Data, Contact Data, Technical Data, and Usage Data. We use your personal data to perform contracts and comply with legal obligations.</p>
+        </article>
+      </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

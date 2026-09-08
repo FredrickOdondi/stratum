@@ -61,11 +61,11 @@ export function LandingPage() {
         <div className="hero-content">
 
           <h1 className="hero-title">
-            AI-Native <br />
-            <span>Strategy Consulting</span>
+            The Premier <br />
+            <span>AI Consulting Platform</span>
           </h1>
           <p className="hero-subtitle">
-            From intake to polished deliverable in hours. Stratum accelerates your workflow using specialized AI agents, ensuring every claim is backed by irrefutable evidence.
+            From intake to polished deliverable in hours. Stratum is the definitive AI strategy tool for consultants, accelerating your workflow using specialized AI agents, ensuring every claim is backed by irrefutable evidence.
           </p>
           <div className="hero-ctas">
             {user ? (
@@ -86,6 +86,20 @@ export function LandingPage() {
         </div>
         <div className="hero-image-wrapper">
           <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Consulting Team collaborating" fetchPriority="high" />
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section style={{ padding: '0 24px 80px', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--t3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '24px' }}>
+          Trusted by top-tier consulting firms & private equity since 2026
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap', opacity: 0.6, filter: 'grayscale(100%)' }}>
+          {['McKinsey & Co. Alumni', 'Bain & Company Alumni', 'Top-10 PE Firm', 'Global Fortune 500 Strategy'].map((brand) => (
+            <div key={brand} style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--t2)' }}>
+              {brand}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -114,9 +128,9 @@ export function LandingPage() {
           <div className="bento-card bento-medium" style={{ padding: 0 }}>
             <div style={{ padding: '40px 40px 0' }}>
               <div className="bento-icon"><Network size={24} /></div>
-              <h3 className="bento-title">MECE Issue Trees</h3>
+              <h3 className="bento-title">Automate MECE Issue Trees</h3>
               <p className="bento-desc">
-                Instantly break down complex client problems into Mutually Exclusive, Collectively Exhaustive sub-questions. Stratum builds the logical framework before diving into the data.
+                Instantly break down complex client problems into Mutually Exclusive, Collectively Exhaustive sub-questions. Stratum automates the logical framework before diving into the data.
               </p>
             </div>
             <div style={{ marginTop: '32px', height: '240px', background: 'var(--bg-3)', borderTop: '1px solid var(--b1)' }}>
