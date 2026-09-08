@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AppLogo } from '../../components/layout/AppLogo';
 import { useAuth } from '../../hooks/useAuth';
 import { CheckCircle2, Zap } from 'lucide-react';
+import { SEO } from '../../components/seo/SEO';
 import './PricingPage.css';
 
 export function PricingPage() {
@@ -10,6 +11,10 @@ export function PricingPage() {
 
   return (
     <div className="landing-page">
+      <SEO 
+        title="Pricing — Stratum Advisory" 
+        description="Simple, transparent pricing for Stratum Advisory. Get started for free, or upgrade to Pro for advanced features."
+      />
       {/* Navigation */}
       <nav className="landing-nav">
         <Link to="/" className="landing-nav-brand">

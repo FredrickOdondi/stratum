@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /pricing
+Allow: /login
+Disallow: /dashboard
+Disallow: /engagement/
+Disallow: /agent/
+Disallow: /connectors
+Disallow: /consolidated-data
+Disallow: /ask-ai
+Disallow: /auth/callback
+
+Sitemap: https://stratum.com/sitemap.xml

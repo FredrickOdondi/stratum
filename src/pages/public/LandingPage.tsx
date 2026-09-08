@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { ArrowRight, Bot, Zap, Network, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import { AppLogo } from '../../components/layout/AppLogo';
+import { SEO } from '../../components/seo/SEO';
 import './LandingPage.css';
 
 export function LandingPage() {
@@ -28,6 +29,10 @@ export function LandingPage() {
 
   return (
     <div className="landing-page">
+      <SEO 
+        title="Stratum Advisory — Next-Gen AI Consulting Platform" 
+        description="Transform your strategic engagements with Stratum Advisory. Connect live data, leverage specialized AI agents, and generate client-ready deliverables." 
+      />
       {/* Navigation */}
       <nav className="landing-nav">
         <Link to="/" className="landing-nav-brand">
@@ -50,6 +55,7 @@ export function LandingPage() {
         </div>
       </nav>
 
+      <main>
       {/* Hero */}
       <section className="hero-section">
         <div className="hero-content">
@@ -159,6 +165,7 @@ export function LandingPage() {
 
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="landing-footer">

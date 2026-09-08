@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { useAuth } from './hooks/useAuth';
 import { AuthPage } from './pages/auth/AuthPage';
 import { DashboardPage } from './pages/dashboard/DashboardPage';
@@ -44,75 +45,77 @@ export default function App() {
   useTheme(); // Initialize global theme logic
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/auth" element={<AuthPage />} />
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/auth" element={<AuthPage />} />
 
-        <Route path="/dashboard" element={
-          <ProtectedRoute><DashboardPage /></ProtectedRoute>
-        } />
-        <Route path="/engagements" element={
-          <ProtectedRoute><AllEngagementsPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/new" element={
-          <ProtectedRoute><NewEngagementPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id" element={
-          <ProtectedRoute><Navigate to="scoping" replace /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/scoping" element={
-          <ProtectedRoute><ScopingPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/issue-tree" element={
-          <ProtectedRoute><IssueTreePage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/research" element={
-          <ProtectedRoute><ResearchPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/analysis" element={
-          <ProtectedRoute><AnalysisPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/synthesis" element={
-          <ProtectedRoute><SynthesisPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/quality-check" element={
-          <ProtectedRoute><QualityCheckPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/deliverable" element={
-          <ProtectedRoute><DeliverablePage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/presentation" element={
-          <ProtectedRoute><PresentationViewerPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/present" element={
-          <ProtectedRoute><PresentationPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/chat" element={
-          <ProtectedRoute><EngagementChatPage /></ProtectedRoute>
-        } />
-        <Route path="/engagement/:id/review" element={
-          <ProtectedRoute><ReviewPage /></ProtectedRoute>
-        } />
-        <Route path="/reviewer" element={
-          <ProtectedRoute><ReviewerQueuePage /></ProtectedRoute>
-        } />
-        <Route path="/platform/connectors" element={
-          <ProtectedRoute><ConnectorsPage /></ProtectedRoute>
-        } />
-        <Route path="/platform/data" element={
-          <ProtectedRoute><ConsolidatedDataPage /></ProtectedRoute>
-        } />
-        <Route path="/platform/ask-ai" element={
-          <ProtectedRoute><AskAIPage /></ProtectedRoute>
-        } />
-        <Route path="/agent/:id" element={
-          <ProtectedRoute><AgentProfilePage /></ProtectedRoute>
-        } />
+          <Route path="/dashboard" element={
+            <ProtectedRoute><DashboardPage /></ProtectedRoute>
+          } />
+          <Route path="/engagements" element={
+            <ProtectedRoute><AllEngagementsPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/new" element={
+            <ProtectedRoute><NewEngagementPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id" element={
+            <ProtectedRoute><Navigate to="scoping" replace /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/scoping" element={
+            <ProtectedRoute><ScopingPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/issue-tree" element={
+            <ProtectedRoute><IssueTreePage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/research" element={
+            <ProtectedRoute><ResearchPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/analysis" element={
+            <ProtectedRoute><AnalysisPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/synthesis" element={
+            <ProtectedRoute><SynthesisPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/quality-check" element={
+            <ProtectedRoute><QualityCheckPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/deliverable" element={
+            <ProtectedRoute><DeliverablePage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/presentation" element={
+            <ProtectedRoute><PresentationViewerPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/present" element={
+            <ProtectedRoute><PresentationPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/chat" element={
+            <ProtectedRoute><EngagementChatPage /></ProtectedRoute>
+          } />
+          <Route path="/engagement/:id/review" element={
+            <ProtectedRoute><ReviewPage /></ProtectedRoute>
+          } />
+          <Route path="/reviewer" element={
+            <ProtectedRoute><ReviewerQueuePage /></ProtectedRoute>
+          } />
+          <Route path="/platform/connectors" element={
+            <ProtectedRoute><ConnectorsPage /></ProtectedRoute>
+          } />
+          <Route path="/platform/data" element={
+            <ProtectedRoute><ConsolidatedDataPage /></ProtectedRoute>
+          } />
+          <Route path="/platform/ask-ai" element={
+            <ProtectedRoute><AskAIPage /></ProtectedRoute>
+          } />
+          <Route path="/agent/:id" element={
+            <ProtectedRoute><AgentProfilePage /></ProtectedRoute>
+          } />
 
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }

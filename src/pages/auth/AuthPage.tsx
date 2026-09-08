@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import { Check, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { AppLogo } from '../../components/layout/AppLogo';
+import { SEO } from '../../components/seo/SEO';
 
 type View = 'sign_in' | 'sign_up' | 'forgot';
 
@@ -79,6 +80,10 @@ export function AuthPage() {
 
   return (
     <div className="auth-page">
+      <SEO 
+        title="Sign In — Stratum Advisory" 
+        description="Sign in to your Stratum Advisory account to manage your strategic engagements."
+      />
       {/* Left branding panel */}
       <div className="auth-panel-left">
         <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
