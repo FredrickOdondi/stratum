@@ -20,6 +20,21 @@
     <meta property="twitter:description" content="AI-powered strategy consulting engagement platform. From intake to polished deliverable, powered by specialised AI agents." />
     <meta property="twitter:image" content="https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png" />
     
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Stratum Advisory",
+        "url": "https://stratumsys.online",
+        "logo": "https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png",
+        "sameAs": [
+          "https://twitter.com/stratumadvisory",
+          "https://linkedin.com/company/stratumadvisory"
+        ]
+      }
+    </script>
+
     <title>Stratum Advisory — AI Consulting Platform</title>
     <script>
       (function() {
@@ -32,7 +47,40 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- STATIC PRERENDER FOR CRAWLERS (React will overwrite this) -->
+      <header>
+        <nav>
+          <a href="/">Stratum Advisory</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+          <a href="/login">Sign In</a>
+        </nav>
+      </header>
+      <main>
+        <h1>AI-Native Strategy Consulting</h1>
+        <p>From intake to polished deliverable in hours. Stratum accelerates your workflow using specialized AI agents, ensuring every claim is backed by irrefutable evidence.</p>
+        
+        <h2>Your Private AI Consulting Team</h2>
+        <p>Stratum doesn't just use one model. It deploys an entire suite of specialized agents—from the Scoping Agent to the Red-Team QA Critic—who collaborate seamlessly to structure, analyze, and synthesize your engagement.</p>
+        
+        <h2>Who is Stratum Advisory For?</h2>
+        <p>Stratum Advisory is engineered for boutique strategy consulting firms, private equity operating teams, and corporate strategy departments who need to deliver top-tier insights without the overhead of a massive analyst team. If your workflow involves interviewing experts, analyzing financial datasets, synthesizing transcripts, and building MECE (Mutually Exclusive, Collectively Exhaustive) issue trees to solve complex client problems, Stratum acts as your dedicated digital workforce.</p>
+        
+        <h2>How Our AI Platform Works</h2>
+        <p>We don't just provide a chat interface. Stratum uses an advanced multi-agent architecture. You connect your data sources (like Notion, Google Drive, or raw PDFs), and our specialized agents take over. The Scoping Agent structures the problem. The Research Agent pulls exact, cited evidence from your data. The Synthesis Agent applies the Pyramid Principle to draft slide storylines, and the Red-Team Agent critiques the output for logical flaws before you export it to a client-ready PowerPoint deliverable.</p>
+      </main>
+      <footer>
+        <nav>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/pricing">Pricing</a>
+        </nav>
+        <p>&copy; 2026 Stratum Advisory. All rights reserved.</p>
+      </footer>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
