@@ -89,7 +89,7 @@ export function PricingPage() {
           {/* Pro Tier */}
           <div className="pricing-card pro">
             <div className="pricing-plan">Pro Subscriber</div>
-            <div className="pricing-price">KES 10 <span className="pricing-period" style={{ color: 'rgba(255,255,255,0.5)' }}>/ month</span></div>
+            <div className="pricing-price">KES 2,000 <span className="pricing-period" style={{ color: 'rgba(255,255,255,0.5)' }}>/ month</span></div>
             <p className="pricing-desc">For serious consultants who need unlimited power and scale.</p>
             
             <ul className="pricing-features">

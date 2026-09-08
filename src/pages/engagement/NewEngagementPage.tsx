@@ -132,7 +132,7 @@ export function NewEngagementPage() {
   const config = {
     reference: (new Date()).getTime().toString(),
     email: user?.email || 'test@stratum.com',
-    amount: 10 * 100, // 10 KES
+    amount: 2000 * 100, // 2000 KES
     publicKey: 'pk_live_82a92343e08ef9d76f653ae86e0664d098685e20',
     currency: 'KES',
   };
