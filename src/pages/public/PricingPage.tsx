@@ -12,7 +12,7 @@ export function PricingPage() {
   return (
     <div className="landing-page">
       <SEO 
-        title="Pricing — Stratum Advisory" 
+        title="Pricing Plans - Stratum Advisory | Flexible AI Consulting Tool" 
         description="Simple, transparent pricing for Stratum Advisory. Get started for free, or upgrade to Pro for advanced features."
       />
       {/* Navigation */}

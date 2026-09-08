@@ -81,8 +81,8 @@ export function AuthPage() {
   return (
     <div className="auth-page">
       <SEO 
-        title="Sign In — Stratum Advisory" 
-        description="Sign in to your Stratum Advisory account to manage your strategic engagements."
+        title="Sign In / Register - Stratum Advisory" 
+        description="Sign in to your Stratum Advisory account to manage your strategic engagements and access your AI agents."
       />
       {/* Left branding panel */}
       <div className="auth-panel-left">

@@ -85,7 +85,7 @@ export function LandingPage() {
           </div>
         </div>
         <div className="hero-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Consulting Team collaborating" />
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Consulting Team collaborating" fetchPriority="high" />
         </div>
       </section>
 
@@ -120,7 +120,7 @@ export function LandingPage() {
               </p>
             </div>
             <div style={{ marginTop: '32px', height: '240px', background: 'var(--bg-3)', borderTop: '1px solid var(--b1)' }}>
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Issue Tree Network Visualization" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Issue Tree Network Visualization" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
             </div>
           </div>
 
@@ -156,17 +156,77 @@ export function LandingPage() {
               </button>
             </div>
             <div style={{ flex: 1, height: '100%', minHeight: '300px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--b1)' }}>
-              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Data Synthesis and Slide Generation" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Data Synthesis and Slide Generation" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
             </div>
           </div>
 
         </div>
       </section>
+
+      {/* SEO Text Sections */}
+      <section style={{ maxWidth: 1200, margin: '0 auto', padding: '100px 24px', display: 'flex', flexDirection: 'column', gap: '80px' }}>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>
+          <div>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--t1)', marginBottom: '24px' }}>Who is Stratum Advisory For?</h2>
+            <p style={{ fontSize: '1rem', color: 'var(--t2)', lineHeight: 1.7, marginBottom: '16px' }}>
+              Stratum Advisory is engineered for boutique strategy consulting firms, private equity operating teams, and corporate strategy departments who need to deliver top-tier insights without the overhead of a massive analyst team.
+            </p>
+            <p style={{ fontSize: '1rem', color: 'var(--t2)', lineHeight: 1.7 }}>
+              If your workflow involves interviewing experts, analyzing financial datasets, synthesizing transcripts, and building MECE (Mutually Exclusive, Collectively Exhaustive) issue trees to solve complex client problems, Stratum acts as your dedicated digital workforce.
+            </p>
+          </div>
+          <div>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--t1)', marginBottom: '24px' }}>How Our AI Platform Works</h2>
+            <p style={{ fontSize: '1rem', color: 'var(--t2)', lineHeight: 1.7, marginBottom: '16px' }}>
+              We don't just provide a chat interface. Stratum uses an advanced multi-agent architecture. You connect your data sources (like Notion, Google Drive, or raw PDFs), and our specialized agents take over.
+            </p>
+            <p style={{ fontSize: '1rem', color: 'var(--t2)', lineHeight: 1.7 }}>
+              The <strong>Scoping Agent</strong> structures the problem. The <strong>Research Agent</strong> pulls exact, cited evidence from your data. The <strong>Synthesis Agent</strong> applies the Pyramid Principle to draft slide storylines, and the <strong>Red-Team Agent</strong> critiques the output for logical flaws before you export it to a client-ready PowerPoint deliverable.
+            </p>
+          </div>
+        </div>
+
+      </section>
       </main>
 
-      {/* Footer */}
-      <footer className="landing-footer">
-        <p>&copy; {new Date().getFullYear()} Stratum Advisory. All rights reserved.</p>
+      {/* Fat Footer */}
+      <footer className="landing-footer" style={{ borderTop: '1px solid var(--b1)', padding: '60px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1200, width: '100%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '40px' }}>
+          <div>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginBottom: '16px' }}>
+              <AppLogo size={24} />
+              <span style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--t1)' }}>Stratum</span>
+            </Link>
+            <p style={{ fontSize: '0.875rem', color: 'var(--t3)', lineHeight: 1.6, maxWidth: 250 }}>
+              The next-generation AI platform for modern strategy consulting.
+            </p>
+          </div>
+          
+          <div>
+            <h4 style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--t1)', marginBottom: '16px' }}>Product</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <Link to="/pricing" style={{ fontSize: '0.875rem', color: 'var(--t2)', textDecoration: 'none' }}>Pricing</Link>
+              <Link to="/auth" style={{ fontSize: '0.875rem', color: 'var(--t2)', textDecoration: 'none' }}>Sign In</Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--t1)', marginBottom: '16px' }}>Company</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <Link to="/about" style={{ fontSize: '0.875rem', color: 'var(--t2)', textDecoration: 'none' }}>About Us</Link>
+              <Link to="/contact" style={{ fontSize: '0.875rem', color: 'var(--t2)', textDecoration: 'none' }}>Contact</Link>
+              <Link to="/privacy" style={{ fontSize: '0.875rem', color: 'var(--t2)', textDecoration: 'none' }}>Privacy Policy</Link>
+            </div>
+          </div>
+        </div>
+        <div style={{ width: '100%', maxWidth: 1200, borderTop: '1px solid var(--b1)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.875rem', color: 'var(--t3)' }}>
+          <p>&copy; {new Date().getFullYear()} Stratum Advisory. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            <a href="https://twitter.com/stratumadvisory" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--t3)', textDecoration: 'none' }}>Twitter</a>
+            <a href="https://linkedin.com/company/stratumadvisory" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--t3)', textDecoration: 'none' }}>LinkedIn</a>
+          </div>
+        </div>
       </footer>
     </div>
   );

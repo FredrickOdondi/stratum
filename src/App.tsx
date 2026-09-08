@@ -23,6 +23,9 @@ import { AskAIPage } from './pages/platform/AskAIPage';
 import { AgentProfilePage } from './pages/platform/AgentProfilePage';
 import { LandingPage } from './pages/public/LandingPage';
 import { PricingPage } from './pages/public/PricingPage';
+import { AboutPage } from './pages/public/AboutPage';
+import { ContactPage } from './pages/public/ContactPage';
+import { PrivacyPage } from './pages/public/PrivacyPage';
 import { useTheme } from './hooks/useTheme';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -50,6 +53,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/auth" element={<AuthPage />} />
 
           <Route path="/dashboard" element={

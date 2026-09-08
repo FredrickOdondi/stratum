@@ -13,7 +13,7 @@ export function SEO({
   title = 'Stratum Advisory — AI Consulting Platform',
   description = 'AI-powered strategy consulting engagement platform. From intake to polished deliverable, powered by specialised AI agents.',
   image = 'https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png',
-  url = 'https://stratum.com',
+  url = 'https://stratumsys.online',
   type = 'website',
 }: SEOProps) {
   return (
@@ -36,6 +36,21 @@ export function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      
+      {/* Schema.org Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Stratum Advisory",
+          "url": "https://stratumsys.online",
+          "logo": "https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Stratum-og-image.png",
+          "sameAs": [
+            "https://twitter.com/stratumadvisory",
+            "https://linkedin.com/company/stratumadvisory"
+          ]
+        })}
+      </script>
     </Helmet>
   );
 }

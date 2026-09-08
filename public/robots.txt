@@ -10,4 +10,4 @@ Disallow: /consolidated-data
 Disallow: /ask-ai
 Disallow: /auth/callback
 
-Sitemap: https://stratum.com/sitemap.xml
+Sitemap: https://stratumsys.online/sitemap.xml
