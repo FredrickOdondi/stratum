@@ -9,6 +9,22 @@
   position: relative;
 }
 
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, var(--b1) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--b1) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5; /* Subtle grid */
+}
+
 /* Solid Nav */
 .landing-nav {
   position: fixed;
