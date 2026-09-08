@@ -59,10 +59,7 @@ export function LandingPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="hero-content">
-          <div className="hero-pill">
-            <Zap size={14} fill="currentColor" />
-            The future of consulting is here
-          </div>
+
           <h1 className="hero-title">
             AI-Native <br />
             <span>Strategy Consulting</span>
