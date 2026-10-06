@@ -1,33 +1,39 @@
-# React + TypeScript + Vite
+# Stratum Advisory
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**AI-powered strategy consulting platform.** Stratum takes a client engagement from intake to a polished deliverable, using specialised AI agents that attach citations to every claim.
 
-Currently, two official plugins are available:
+**Live:** https://stratum-nine-orcin.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+- **Engagement workflow:** staged pipeline from client intake through analysis, reviewer sign-off and final deliverable
+- **Specialised agents:** strategy and data agents built on OpenAI, with retrieval over client documents via Pinecone
+- **Business data connectors:** pulls metrics from storefront, payments and other business tools to compute KPIs like CAC, LTV and contribution margin (see [`connectors.md`](connectors.md))
+- **Document ingestion:** parses uploaded PDFs, spreadsheets and CSVs
+- **Deliverable export:** PDF, Word and PowerPoint output
+- **Roles:** client dashboard, reviewer workspace and platform admin
+- **Billing:** Paystack subscriptions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+React 19 · TypeScript · Vite · Supabase (auth, Postgres, migrations) · OpenAI · Pinecone · TanStack Query · Recharts · Vercel
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Project structure
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+src/
+  pages/        auth, dashboard, engagement, reviewer, platform, public
+  components/   connectors, engagement, layout, seo
+  lib/          agents, dataAgent, search, pinecone, documentParser,
+                generatePDF, docxExport, engagementStages, audit
+supabase/
+  migrations/   database schema
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-# stratum
+## Run locally
+
+```bash
+cp .env.example .env   # add your Supabase, OpenAI and Pinecone keys
+npm install
+npm run dev
+```
