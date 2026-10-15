@@ -7,6 +7,10 @@
   font-family: var(--font-sans);
   overflow-x: hidden;
   position: relative;
+  /* Local tokens for hero CTA */
+  --success: #16A34A;
+  --success-dark: #13803D;
+  --on-success: #0B0F0A;
 }
 
 .landing-page::before {
@@ -162,6 +166,10 @@
   box-shadow: 0 4px 20px rgba(200, 169, 110, 0.4);
   transition: all 0.2s ease;
 }
+.btn-hero-primary:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--gold) 60%, transparent);
+  outline-offset: 2px;
+}
 
 .btn-hero-primary:hover {
   transform: translateY(-2px);
@@ -193,16 +201,21 @@
 
 /* Get Started CTA (green variant) */
 .btn-hero-primary.get-started-cta {
-  background: #16A34A; /* success */
-  color: #0B0F0A; /* ensure WCAG AA contrast in light/dark */
-  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.35);
+  background: var(--success);
+  color: var(--on-success);
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--success) 35%, transparent);
 }
 .btn-hero-primary.get-started-cta:hover {
-  background: #13803D; /* darker on hover */
-  box-shadow: 0 6px 28px rgba(19, 128, 61, 0.45);
+  background: var(--success-dark);
+  box-shadow: 0 6px 28px color-mix(in srgb, var(--success-dark) 45%, transparent);
 }
 .btn-hero-primary.get-started-cta:active {
-  background: #0f6a33;
+  background: var(--success-dark);
+}
+.btn-hero-primary.get-started-cta:focus-visible {
+  background: var(--success-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--success) 30%, transparent), 0 8px 24px color-mix(in srgb, var(--success-dark) 45%, transparent);
 }
 
 /* Bento Features Grid */
