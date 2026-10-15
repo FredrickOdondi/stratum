@@ -191,6 +191,20 @@
   border-color: var(--b3);
 }
 
+/* Get Started CTA (green variant) */
+.btn-hero-primary.get-started-cta {
+  background: #16A34A; /* success */
+  color: #0B0F0A; /* ensure WCAG AA contrast in light/dark */
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.35);
+}
+.btn-hero-primary.get-started-cta:hover {
+  background: #13803D; /* darker on hover */
+  box-shadow: 0 6px 28px rgba(19, 128, 61, 0.45);
+}
+.btn-hero-primary.get-started-cta:active {
+  background: #0f6a33;
+}
+
 /* Bento Features Grid */
 .bento-section {
   position: relative;

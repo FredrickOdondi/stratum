@@ -74,7 +74,7 @@ export function LandingPage() {
               </button>
             ) : (
               <>
-                <button className="btn-hero-primary" onClick={() => navigate('/auth')}>
+                <button className="btn-hero-primary get-started-cta" onClick={() => navigate('/auth')}>
                   Get Started <ArrowRight size={18} />
                 </button>
                 <button className="btn-hero-secondary" onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>
