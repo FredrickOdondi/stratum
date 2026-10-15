@@ -484,7 +484,7 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
 
 .btn-hero-primary:hover {
   transform: translateY(-2px);
-  background: color-mix(in srgb, var(--green) 90%, black);
+  filter: brightness(0.9);
   box-shadow: 0 6px 28px rgba(47, 79, 74, 0.5);
 }
 
