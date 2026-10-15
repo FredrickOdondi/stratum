@@ -1,0 +1,25 @@
+# Alpine factory config: how Alpine may change this repo. Edit before merging.
+# Docs: limits cap each ticket; gates must pass before a PR opens; merge_policy "human" means
+# Alpine only opens PRs and a person merges them.
+version: 1
+limits:
+  max_turns: 30
+  max_gate_iterations: 3
+  max_cost_usd: 2
+gate_runner:
+  env_allowlist: [NODE_ENV, CI]
+gates:
+  - id: install
+    parser: none
+    run: npm ci
+  - id: unit
+    parser: none
+    run: npm test
+protected_paths:
+  - .github/**
+  - .alpine/**
+merge_policy:
+  BR1: human
+  BR2: human
+  BR3: human
+  BR4: human
