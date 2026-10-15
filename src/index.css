@@ -463,6 +463,38 @@ code { font-family: var(--mono); font-size: 0.875em; background: var(--bg-3); pa
 }
 .btn-primary:hover { background: rgba(27, 32, 39, 0.08); }
 
+.btn-hero-primary {
+  background: var(--green);
+  color: var(--bg);
+  padding: 0 32px;
+  height: 52px;
+  border-radius: 12px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(47, 79, 74, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.9);
+  box-shadow: 0 6px 28px rgba(47, 79, 74, 0.5);
+}
+
+.btn-hero-primary:focus,
+.btn-hero-primary:focus-visible {
+  outline: 2px solid var(--bg);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--green-dim), 0 4px 20px rgba(47, 79, 74, 0.4);
+}
+
 .btn-outline {
   background: transparent;
   color: var(--t2);
