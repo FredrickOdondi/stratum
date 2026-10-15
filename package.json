@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "node tests/run-tests.cjs"
+    "test": "node tests/run-tests.js"
   },
   "dependencies": {
     "@pinecone-database/pinecone": "^8.2.0",
